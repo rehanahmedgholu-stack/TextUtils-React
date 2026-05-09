@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from 'react-router-dom';
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from 'react-router-dom';
 
 function App() {
 
@@ -43,42 +43,55 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router> */}
 
-        <Navbar
-          title="TEXTUTILS"
-          aboutText="About TEXTUTILS"
+      <Navbar
+        title="TEXTUTILS"
+        aboutText="About TEXTUTILS"
+        mode={mode}
+        toggleMode={toggleMode}
+      />
+
+      <Alert alert={alert} />
+
+      <div className="container my-3">
+
+        {/* About Page */}
+        {/* <About /> */}
+
+        {/* TextForm Page */}
+        <TextForm
+          showAlert={showAlert}
+          heading="Enter The Text To Analyze"
           mode={mode}
-          toggleMode={toggleMode}
         />
 
-        <Alert alert={alert} />
+        {/* Routing Part Commented */}
+        {/*
+        <Routes>
 
-        <div className="container my-3">
+          <Route
+            exact path="/about"
+            element={<About />}
+          />
 
-          <Routes>
+          <Route
+            exact path="/"
+            element={
+              <TextForm
+                showAlert={showAlert}
+                heading="Enter The Text To Analyze"
+                mode={mode}
+              />
+            }
+          />
 
-            <Route
-             exact path="/about"
-              element={<About />}
-            />
+        </Routes>
+        */}
 
-            <Route
-             exact path="/"
-              element={
-                <TextForm
-                  showAlert={showAlert}
-                  heading="Enter The Text To Analyze"
-                  mode={mode}
-                />
-              }
-            />
+      </div>
 
-          </Routes>
-
-        </div>
-
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
