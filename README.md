@@ -8,7 +8,7 @@ It allows users to analyze, edit, and transform text in real time with a clean a
 This project was built to strengthen React fundamentals, component-based architecture, state management using hooks, and responsive UI development.
 
 🌐 **Live Website:**  
-https://rehanahmedgholu.github.io/TextUtils-React/
+ https://rehanahmedgholu-stack.github.io/TextUtils-React/
 
 ---
 
