@@ -62,7 +62,7 @@ function App() {
         {/* TextForm Page */}
         <TextForm
           showAlert={showAlert}
-          heading="Enter The Text To Analyze"
+          heading="TextUtils - Word Counter & Converter"
           mode={mode}
         />
 
